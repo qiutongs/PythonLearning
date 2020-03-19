@@ -1,0 +1,47 @@
+<div style="text-align: center">
+
+<h1>Winter Olympics medal</h1>
+
+<div>
+  <img src="/static/Winter2018.png" alt=""/>
+</div>
+
+<form action="/" method="POST">
+  <select name="cols">
+    <option value="rank">Rank</option>
+    <option value="name">NOC</option>
+    <option value="gold">Gold</option>
+    <option value="silver">Silver</option>
+    <option value="bronze">Bronze</option>
+    <option value="total">Total</option>
+  </select>
+  <select name="order">
+    <option value="asc">Ascending</option>
+    <option value="des">Descending</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Sort!">
+</form>
+
+<table style="margin: 0px auto;">
+  <tr>
+    <th>Rank</th>
+    <th>NOC</th>
+    <th>Gold</th>
+    <th>Silver</th>
+    <th>Bronze</th>
+    <th>Total</th>
+  </tr>
+
+{% for medal in medals %}
+  <tr>
+    <td>{{ medal.rank }}</td>
+    <td>{{ medal.name }}</td>
+    <td>{{ medal.gold }}</td>
+    <td>{{ medal.silver }}</td>
+    <td>{{ medal.bronze }}</td>
+    <td>{{ medal.total }}</td>
+  </tr>
+{% endfor %}
+</table>
+</div>

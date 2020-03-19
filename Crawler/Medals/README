@@ -1,0 +1,78 @@
+# Get Started
+
+## Setup Python Environment
+
+Python 3.7.0 (I doubt it works on any Python 2.x)
+
+Dependent Modules:
+	- flask
+	- urllib
+	- bs4 (beautiful soup)
+	- sqlite3
+	- matplotlib
+
+How I installed Modules:
+
+```
+pip3 install <module name>
+```
+
+## Run setup.py
+
+> This script creates database, creates table, scrapes data, inserts to table and generate the image.
+
+Go to the base folder. You should see "app.py". Simply run:
+
+```
+python setup.py
+```
+
+or 
+
+```
+python3 setup.py
+```
+
+Expected output:
+
+```
+Create database done!
+Web scraping done!
+Insert data done!
+Image generation done!
+```
+
+## Run app.py
+
+> This scrips starts the web server
+
+Go to the base folder. You should see "app.py". Simply run:
+
+```
+python app.py
+```
+
+or 
+
+```
+python3 app.py
+```
+
+Expected output: 
+```
+Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
+# References
+
+## Technology stack
+
+1. Flask: python web application framework
+- http://flask.pocoo.org/
+- https://www.youtube.com/watch?v=WfpFUmV1d0w
+
+2. Beautiful Soup: python library to parse html
+- https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+3. SQLlite: simple SQL database engine
+- https://www.sqlite.org/index.html
